@@ -1,0 +1,47 @@
+   npx create-next-app@latest my-3d-models-store --typescript
+   cd my-3d-models-store
+   ```
+
+2. **Install Tailwind CSS:**
+   ```bash
+   npm install -D tailwindcss postcss autoprefixer
+   npx tailwindcss init -p
+   ```
+
+3. **Configure Tailwind CSS:**
+   Update `tailwind.config.js`:
+   ```js
+   /** @type {import('tailwindcss').Config} */
+   module.exports = {
+     content: [
+       './pages/**/*.{js,ts,jsx,tsx}',
+       './components/**/*.{js,ts,jsx,tsx}',
+     ],
+     theme: {
+       extend: {},
+     },
+     plugins: [],
+   }
+   ```
+
+   Add the following to `styles/globals.css`:
+   ```css
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+   ```
+
+4. **Install NextAuth for authentication:**
+   ```bash
+   npm install next-auth
+   ```
+
+5. **Install Stripe for payment integration:**
+   ```bash
+   npm install @stripe/stripe-js
+   npm install @stripe/react-stripe-js
+   ```
+
+### Project Structure
+
+Create the following folders and files:
